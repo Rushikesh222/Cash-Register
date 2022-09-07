@@ -1,7 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 * {
+  box-sizing: border-box;
 }
-.container {
+body {
+  background-color: rosybrown;
+  color: white;
+  font-family: "Muli", sans-serif;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
   flex-direction: column;
-  width: 50vw;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  padding: 30px 60px;
+  border-radius: 4px;
+}
+.Heading {
+  text-align: center;
+}
+.change-table {
+  text-align: center;
+}
+#bill-amount {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: white;
+}
+#cash-given {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: white;
+}
+#check-btn {
+  background-color: wheats;
+  border-radius: 6px;
+  display: block;
+  margin-top: 20px;
+  margin-left: 200px;
+  width: 40%;
+  font-size: 18px;
+}
+.change-table {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 120px;
+}
+.change-table td {
+  background-color: #fff;
+  color: red;
+  border: 3px solid white;
+}
+.change-table th {
+  color: wheat;
+  border: 3px solid white;
 }
