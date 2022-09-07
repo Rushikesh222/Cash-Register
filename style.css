@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: mediumpurple;
+  background-color: rosybrown;
   color: white;
   font-family: "Muli", sans-serif;
   display: flex;
@@ -13,40 +13,60 @@ body {
   flex-direction: column;
   margin: 0;
 }
+
 .container {
-  margin-top: 50px;
+  margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 40px;
-  padding-bottom: 10rem;
-  border-radius: 5px;
+  display: block;
+  padding: 40px 80px;
+  border-radius: 4px;
 }
-.heading {
-  text-transform: capitalize;
-  font-size: 30px;
+.Heading {
+  text-align: center;
 }
-.container label {
-  font-size: 30px;
-  text-transform: capitalize;
+.change-table {
+  text-align: center;
 }
-.container input {
-  padding: 10px 10px;
-  font-size: 20px;
-  border-radius: 5px;
+#bill-amount {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: white;
 }
-#check-number {
-  text-transform: capitalize;
-  margin-top: 10px;
-  padding: 15px 20px;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: bold;
+#cash-given {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: white;
 }
-.Message {
-  margin-top: 10px;
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: bold;
+#check-btn {
+  background-color: wheats;
+  border-radius: 6px;
+  display: block;
+  margin-top: 20px;
+  margin-left: 200px;
+  width: 40%;
+  font-size: 18px;
+}
+.change-table {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 120px;
+}
+.change-table td {
+  background-color: #fff;
+  color: red;
+  border: 3px solid white;
+}
+.change-table th {
+  color: wheat;
+  border: 3px solid white;
 }
