@@ -7,12 +7,16 @@ const availableNotes = [2000, 500, 100, 50, 20, 10, 5, 1];
 checkBtn.addEventListener("click", function calidedateBillAndCashAmount() {
   hidemessage();
 
-  if (billAmount.value > 0) {
+  if (Number(billAmount.value) > 0) {
     //12
-    if (cashGiven.value > billAmount.value) {
+
+    if (Number(cashGiven.value) >= Number(billAmount.value)) {
       //2022>12 // true
-      const amountTobeReturned = cashGiven.value - billAmount.value; //2022-12=2010
-      calculateChange(amountTobeReturned);
+
+      const amountToBeReturned =
+        Number(cashGiven.value) - Number(billAmount.value); //2022-12=2010
+      console.log(amountToBeReturned);
+      calculateChange(amountToBeReturned);
     } else {
       showMessage("Do you wanna wash plates?");
     }
@@ -20,15 +24,15 @@ checkBtn.addEventListener("click", function calidedateBillAndCashAmount() {
     showMessage("Invalid Bill Amount");
   }
 });
-function calculateChange(amountTobeReturned) {
+function calculateChange(amountToBeReturned) {
   //2010
   //go over all the avilable
   for (let i = 0; i < availableNotes.length; i++) {
     // no of notes need for the denomination
-    const numberOfNotes = Math.trunc(amountTobeReturned / availableNotes[i]);
+    const numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
     //2010 /2000 = 1 || 10 - 500 = 0
     //amount left after calculating in the number of notes needed
-    amountTobeReturned %= availableNotes[i]; //2010 % 2000 = 10 || 10% 500 =10
+    amountToBeReturned %= availableNotes[i]; //2010 % 2000 = 10 || 10% 500 =10
     // updateing  the no of notes in the table for the current amount
     noOfNotes[i].innerText = numberOfNotes;
   }
